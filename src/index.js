@@ -3,5 +3,18 @@
  * @returns number of love triangles
  */
 module.exports = function getLoveTrianglesCount(preferences = []) {
-  // your implementation
-};
+  var count = 0;
+  var arr = [0];
+  preferences = arr.concat(preferences);
+
+  var i;
+  for (i = 1; i<= preferences.length; i++){
+    var firstSpichonee = preferences[i];
+    var secondSpichonee = preferences[firstSpichonee];
+    var thirdSpichonee = preferences[secondSpichonee];
+  }
+  if (thirdSpichonee == i){
+    count++;
+  }
+  return count/3;
+}
