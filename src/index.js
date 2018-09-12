@@ -13,7 +13,9 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
     var secondSpichonee = preferences[firstSpichonee];
     var thirdSpichonee = preferences[secondSpichonee];
   }
-  if (thirdSpichonee == i){
+  if ((thirdSpichonee == i) && (preferences[firstSpichonee] != firstSpichonee
+                            && preferences[secondSpichonee] != secondSpichonee
+                            && preferences[thirdSpichonee] != thirdSpichonee)){
     count++;
   }
   return count/3;
